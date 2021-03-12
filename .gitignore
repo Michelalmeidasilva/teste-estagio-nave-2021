@@ -1,0 +1,33 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+desafio/node_modules
+desafio/bower_components
+desafio/build
+
+# IDEs and editors
+desafio/.idea
+desafio/.project
+desafio/.classpath
+desafio/*.launch
+desafio/.settings/
+
+
+# System Files
+desafio/.DS_Store
+desafio/Thumbs.db
+
+# logs
+desafio/npm-debug.log*
+desafio/yarn-debug.log*
+desafio/yarn-error.log*
+
+# tmp
+desafio/data
+desafio/.env
+
+desafio/*.sqlite3
+desafio/*.sqlite3-journal
+
+desafio/package-lock.json
+desafio/yarn.lock
