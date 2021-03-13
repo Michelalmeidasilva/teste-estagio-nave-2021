@@ -1,4 +1,4 @@
-# Exercicios De Lógica
+# EXERCICIOS DE LÓGICA
 
 ## CodeAndBox
 Disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
@@ -11,15 +11,15 @@ Entre no diretório `exercicios-logicos` e utilize os comandos:
 - Os exercicios estão implementados um em cada botão, a resposta é mostrada no console.
 - Apenas o exercicio 1 tem input para ser digitada
 -
-# Desafio back-end 
+# DESAFIO BACK-END
 
 O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargo, tempo de empresa e projeto que participou. Deve ser possível saber em quais projetos um naver está e vice-versa.
 
 ## Instalação de pré requisitos
-1. Instale [Node.JS](https://nodejs.org/en/) versão LTS
-2. Instale [PostgreSQL](https://www.postgresql.org/download/) 
+1. Instale o [Node.JS](https://nodejs.org/en/) versão LTS
+2. Instale o [PostgreSQL](https://www.postgresql.org/download/) 
 3. Clone esse repositório e entre na pasta onde foi clonado.
-4. Instale as dependencias utilizando `yarn` ou `npm install`
+4. Instale as dependências utilizando `yarn` ou `npm install`
 
 ## Antes de rodar o projeto:
 1. Para criar um novo banco de dados, utilize os  seguintes comandos dentro do terminal psql: 
@@ -29,12 +29,8 @@ O sistema consiste em um banco de dados dos navers, possuindo informações como
 
 2. Altere a DATABASE_URL dentro do arquivo .env para postgress://`user`:`password`@`localhost`/`database`
 3. Execute o script de criação das tabelas `yarn db:migrate` ou `npm run db:migrate`
-4. Execute o script: `yarn db:seed` ou `npm run db:seed`
+4. Execute o script de população de dados: `yarn db:seed` ou `npm run db:seed`
 5. Execute o script: [`yarn start`, `npm run start`] ou [`yarn dev`, `npm run dev`] para iniciar o servidor.
-
-## Testes
-
-1. Execute o script de teste: `yarn test` ou `npm run test`
 
 ## Estrutura de diretórios Structure
 
