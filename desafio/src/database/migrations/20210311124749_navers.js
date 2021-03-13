@@ -3,7 +3,7 @@ export const up = knex =>
     .createTable('navers', table => {
       table.increments('id').primary()
       table.string('name').notNullable()
-      table.string('job_role').unsigned()
+      table.string('job_role')
       table.datetime('birthdate')
       table.datetime('admission_date')
       table.timestamp('created_at').defaultTo(knex.fn.now())
