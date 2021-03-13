@@ -1,13 +1,16 @@
 # Exercicios De Lógica
 
+## CodeAndBox
 Disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
 
-ou diretamente pelo repositório clonado.
+## Rodando diretamente pelo diretório clonado 
+Entre no diretório `exercicios-logicos` e utilize os comandos: 
+1. npm install 
+2. npm run start
 
-## Utilização 
-1. npm install -g parcel-bundler@1.12.3
-2. parcel index.html
-
+- Os exercicios estão implementados um em cada botão, a resposta é mostrada no console.
+- Apenas o exercicio 1 tem input para ser digitada
+-
 # Desafio back-end 
 
 O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargo, tempo de empresa e projeto que participou. Deve ser possível saber em quais projetos um naver está e vice-versa.
