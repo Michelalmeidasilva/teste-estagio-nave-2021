@@ -1,5 +1,5 @@
 import { Model } from 'objection'
-import { Project } from './Project'
+import Project  from './Project'
 import { baseModel } from './index'
 
 class Naver extends baseModel{
