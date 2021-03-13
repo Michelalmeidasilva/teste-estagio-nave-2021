@@ -31,3 +31,10 @@ desafio/*.sqlite3-journal
 
 desafio/package-lock.json
 desafio/yarn.lock
+
+
+exercicios-logica/.cache/
+exercicios-logica/dist
+exercicios-logica/node_modules
+exercicios-logica/package-lock.json
+
