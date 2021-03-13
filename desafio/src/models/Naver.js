@@ -7,20 +7,20 @@ class Naver extends baseModel{
 
   static get relationMappings() {
     return {
-        projects: {
-            relation: Model.ManyToManyRelation,
-            modelClass: Project,
-            join: {
-              from: 'navers.id',
-              through: {
-                from: 'projects_navers.naver_id',
-                to: 'projects_navers.project_id'
-              },
-              to: 'projects.id'
-            }
-          }
+      projects: {
+        relation: Model.ManyToManyRelation,
+        modelClass: Project,
+        join: {
+          from: 'navers.id',
+          through: {
+            from: 'projects_navers.naver_id',
+            to: 'projects_navers.project_id'
+          },
+          to: 'projects.id'
+        }
+      }
     };
-}
+  }
 }
 
 

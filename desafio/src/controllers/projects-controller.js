@@ -2,19 +2,20 @@ import Naver from 'models/Naver'
 import Project from 'models/Project'
 
 
-export const index = async ctx => await Project.query().eager('navers')
+export const index = async ctx => {
+  return await Project.query().select('id', 'name')
+}
 
-
-export const show = async ctx => 
-  await Project
+export const show = async ctx =>{ 
+  return await Project
     .query()
-    .eager('navers')
+    .withGraphFetched('navers')
     .where('id', ctx.params.id)
     .throwIfNotFound({
       message: `project with id ${ctx.params.id} doesnt exist`,
       type: `Custom type`
     })
-
+  }
 
 export const store = async ctx => {
   const {body} = ctx.request;
@@ -24,18 +25,20 @@ export const store = async ctx => {
   })
 
   project.navers =[];
-  for (const id of body.navers) {
-    const naver = await Naver.query().findById(id).throwIfNotFound({
-      message: `naver with id ${id} doesnt exist`,
-      type: `Custom type`
-    });
-    project.navers.push(naver)
-  }
 
-  for (const naver of project.navers) {
-    await project.$relatedQuery('navers').relate(naver)
+  if(body.navers){
+    for (const id of body.navers) {
+      const naver = await Naver.query().findById(id).throwIfNotFound({
+        message: `naver with id ${id} doesnt exist`,
+        type: `Custom type`
+      });
+      project.navers.push(naver)
+    }
+    
+    for (const naver of project.navers) {
+      await project.$relatedQuery('navers').relate(naver)
+    }
   }
-
   return project;
 }
 
