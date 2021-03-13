@@ -50,8 +50,7 @@ O sistema consiste em um banco de dados dos navers, possuindo informações como
 
 
 ## Postman
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/adcd8589e2507a6971f0)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/f4925a3f10d66a729063)
 
 ## Referencias
 Foi utilizado a Boilerplate construida pela nave.rs 
