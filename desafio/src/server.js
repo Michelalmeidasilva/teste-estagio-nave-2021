@@ -8,28 +8,10 @@ import * as winston from 'winston'
 import routes from 'routes'
 import { errorHandlingMiddleware } from 'middlewares'
 import {  createTransporterPostgres } from 'helpers'
-import { LOGGER_GROUP, LOGGER_STREAM_GENERAL } from './utils'
-
 
 const app = new Koa()
 
 app.use(helmet())
-
-/**
- * é equivalente a
- * app.use(helmet.contentSecurityPolicy());
-  app.use(helmet.dnsPrefetchControl());
-  app.use(helmet.expectCt());
-  app.use(helmet.frameguard());
-  app.use(helmet.hidePoweredBy());ex
-  app.use(helmet.hsts());
-  app.use(helmet.ieNoOpen());
-  app.use(helmet.noSniff());
-  app.use(helmet.permittedCrossDomainPolicies());
-  app.use(helmet.referrerPolicy());
-  app.use(helmet.xssFilter());
- */
-
 
 app.use(
   logger({
@@ -51,12 +33,6 @@ app.use(
   })
 )
 
-
-/**
- *  uma especificação do W3C que, quando implementado pelo navegador,
- *  permite que um site acesse recursos de outro site mesmo estando 
- *  em domínios diferentes.
- */
 app.use(
   Cors({
     origin: '*',
