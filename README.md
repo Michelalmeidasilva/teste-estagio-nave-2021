@@ -63,7 +63,7 @@ Na pasta `exercicios-extra-sql/` estão os arquivos com os exercicios feitos em 
 
 ## (Bonus) Exercício de Banco de Dados -  Direto no desafio
 
-Os exercicios 1 e 2 foram implementados e ficaram  para rodar diretamente no back do desafio, para rodar entre na pasta do `desafio`, após:
+Os exercicios 1 e 2 estão disponiveis direto no back dodesafio, para rodar entre na pasta do `desafio`, após:
 
 Para rodar o exercicio 1: Script que deleta e crie todas as tabelas.
 
