@@ -10,6 +10,7 @@ const NaverValidate = {
           job_role: Joi.string().required(),
           birthdate: Joi.date().required(),
           admission_date: Joi.date().required(),
+          projects: Joi.array().items(Joi.number())
         }
     }),
 
