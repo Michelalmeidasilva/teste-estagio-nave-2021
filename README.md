@@ -30,7 +30,7 @@ O sistema consiste em um banco de dados dos navers, possuindo informações como
 2. Altere a DATABASE_URL dentro do arquivo .env para postgress://`user`:`password`@`localhost`/`database`
 3. Execute o script de criação das tabelas `yarn db:migrate` ou `npm run db:migrate`
 4. Execute o script de população de dados: `yarn db:seed` ou `npm run db:seed`
-5. Execute o script: [`yarn start`, `npm run start`] ou [`yarn dev`, `npm run dev`] para iniciar o servidor.
+5. Execute o script: [`yarn dev`, `npm run dev`] para iniciar o servidor.
 
 ## Estrutura de diretórios Structure
 
