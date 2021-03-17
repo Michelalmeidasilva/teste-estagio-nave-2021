@@ -1,7 +1,7 @@
 # EXERCICIOS DE LÓGICA
 
 ## CodeAndBox
-Os exercicios estão uploadados na plataforma Codebox e está disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
+Os exercicios estão na plataforma Codebox, disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
 
 ## Rodando diretamente pelo diretório clonado 
 Caso você queira rodar diretamente aqui, entre no diretório `exercicios-logicos` e utilize os comandos: 
