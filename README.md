@@ -32,7 +32,7 @@ O sistema consiste em um banco de dados dos navers, possuindo informações como
 4. Execute o script de população de dados: `yarn db:seed` ou `npm run db:seed`
 5. Execute o script: [`yarn dev`, `npm run dev`] para iniciar o servidor.
 
-## Estrutura de diretórios Structure
+## Estrutura de diretórios
 
 ```
 ├── /src
