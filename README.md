@@ -1,16 +1,16 @@
 # EXERCICIOS DE LÓGICA
 
 ## CodeAndBox
-Disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
+Os exercicios estão uploadados na plataforma Codebox e está disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
 
 ## Rodando diretamente pelo diretório clonado 
-Entre no diretório `exercicios-logicos` e utilize os comandos: 
+Caso você queira rodar diretamente aqui, entre no diretório `exercicios-logicos` e utilize os comandos: 
 1. npm install 
 2. npm run start
 
 - Os exercicios estão implementados um em cada botão, a resposta é mostrada no console.
-- Apenas o exercicio 1 tem input para ser digitada
--
+- Apenas o exercicio 1 tem uma input para ser digitada
+
 # DESAFIO BACK-END
 
 O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargo, tempo de empresa e projeto que participou. Deve ser possível saber em quais projetos um naver está e vice-versa.
@@ -50,10 +50,10 @@ O sistema consiste em um banco de dados dos navers, possuindo informações como
 
 
 ## Postman
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/f4925a3f10d66a729063)
+[![Execute no postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/f4925a3f10d66a729063)
 
 ## Referencias
-Foi utilizado a Boilerplate construida pela nave.rs 
+Foi utilizado como base a Boilerplate construida pela nave.rs 
 [A boilerplate for building RESTful APIs using Node.js, PostgreSQL, koa, knex, objection.](https://github.com/naveteam/back-boilerplate)
 
 
