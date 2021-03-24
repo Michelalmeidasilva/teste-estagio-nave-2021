@@ -19,27 +19,27 @@ export const show = async ctx =>{
 export const store = async ctx => {
   const {body} = ctx.request;
 
-  const naver = await Naver.query().insert({
-      name: body.name,
-      admission_date: body.admission_date,
-      job_role: body.job_role,
-      birthdate: body.birthdate,
-    })
+  const projects =[];
 
-  naver.projects =[];
-  
   if(body.projects){
     for (const id of body.projects) {
       const project = await Project.query().findById(id).throwIfNotFound({
         message: `project with id ${id} doesn't exist`,
         type: `Custom type`
       });
-      naver.projects.push(project)
+      projects.push(project)
     }
+  }
 
-    for (const project of naver.projects) {
-      await naver.$relatedQuery('projects').relate(project)
-    }
+  const naver = await Naver.query().insert({
+    name: body.name,
+    admission_date: body.admission_date,
+    job_role: body.job_role,
+    birthdate: body.birthdate,
+  })
+
+  for (const project of projects) {
+    await naver.$relatedQuery('projects').relate(project)
   }
 
   return naver;
