@@ -1,6 +1,9 @@
 import Naver from 'models/Naver'
 import Project from 'models/Project'
 
+import {BadRequest} from '../helpers'
+import {hasDuplicateValues} from '../helpers'
+
 export const index = async ctx => { 
   return await Naver.query().select('id', 'name', 'birthdate', 'admission_date', 'job_role')
 }
@@ -20,6 +23,10 @@ export const store = async ctx => {
   const {body} = ctx.request;
 
   const projects =[];
+
+  if(hasDuplicateValues(body.projects)){
+    throw new BadRequest(`Array de projetos tem id's duplicados`);
+  } 
 
   if(body.projects){
     for (const id of body.projects) {
