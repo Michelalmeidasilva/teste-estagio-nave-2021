@@ -1,6 +1,8 @@
 import Naver from 'models/Naver'
 import Project from 'models/Project'
 
+import {BadRequest} from '../helpers'
+import {hasDuplicateValues} from '../helpers'
 
 export const index = async ctx => {
   return await Project.query().select('id', 'name')
@@ -20,11 +22,12 @@ export const show = async ctx =>{
 export const store = async ctx => {
   const {body} = ctx.request;
 
-  const project = await Project.query().insert({
-    name: body.name,
-  })
+  const navers =[];
 
-  project.navers =[];
+
+  if(hasDuplicateValues(body.navers)){
+    throw new BadRequest(`Array de navers tem id's duplicados`);
+  } 
 
   if(body.navers){
     for (const id of body.navers) {
@@ -32,12 +35,16 @@ export const store = async ctx => {
         message: `naver with id ${id} doesnt exist`,
         type: `Custom type`
       });
-      project.navers.push(naver)
+      navers.push(naver)
     }
-    
-    for (const naver of project.navers) {
-      await project.$relatedQuery('navers').relate(naver)
-    }
+  }
+
+  const project = await Project.query().insert({
+    name: body.name,
+  })
+
+  for (const naver of project.navers) {
+    await project.$relatedQuery('navers').relate(naver)
   }
   return project;
 }
