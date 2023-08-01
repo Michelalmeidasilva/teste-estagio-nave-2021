@@ -15,6 +15,7 @@ If you want to run the exercises directly here, navigate to the `exercicios-logi
 
 The system consists of a database of "navers," containing information such as names, birthdates, positions, years of employment, and projects they have participated in. It should be possible to know which projects a "naver" is associated with and vice versa.
 
+
 ## Prerequisites Installation
 1. Install [Node.JS](https://nodejs.org/en/) LTS version.
 2. Install [PostgreSQL](https://www.postgresql.org/download/).
