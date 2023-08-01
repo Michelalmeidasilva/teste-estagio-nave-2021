@@ -1,38 +1,38 @@
-# EXERCICIOS DE LÓGICA
+# LOGIC EXERCISES
 
 ## CodeAndBox
-Os exercicios estão na plataforma Codebox, disponivel em: [exercícios no codesandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
+The exercises are available on the Codebox platform, accessible at: [exercises on CodeSandbox](https://codesandbox.io/s/teste-estagio-template-forked1-4youu?fontsize=14&hidenavigation=1&theme=dark&file=/src/exercise01.js)
 
-## Rodando diretamente pelo diretório clonado 
-Caso você queira rodar diretamente aqui, entre no diretório `exercicios-logicos` e utilize os comandos: 
-1. npm install 
+## Running directly from the cloned directory
+If you want to run the exercises directly here, navigate to the `exercicios-logicos` directory and use the following commands:
+1. npm install
 2. npm run start
 
-- Os exercicios estão implementados um em cada botão, a resposta é mostrada no console.
-- Apenas o exercicio 1 tem uma input para ser digitada
+- Each exercise is implemented in a separate button, and the response is displayed in the console.
+- Only exercise 1 has an input field to be filled.
 
-# DESAFIO BACK-END
+# BACK-END CHALLENGE
 
-O sistema consiste em um banco de dados dos navers, possuindo informações como: nomes, datas de nascimento, cargo, tempo de empresa e projeto que participou. Deve ser possível saber em quais projetos um naver está e vice-versa.
+The system consists of a database of "navers," containing information such as names, birthdates, positions, years of employment, and projects they have participated in. It should be possible to know which projects a "naver" is associated with and vice versa.
 
-## Instalação de pré requisitos
-1. Instale o [Node.JS](https://nodejs.org/en/) versão LTS
-2. Instale o [PostgreSQL](https://www.postgresql.org/download/) 
-3. Clone esse repositório e entre na pasta onde foi clonado.
-4. Instale as dependências utilizando `yarn` ou `npm install`
+## Prerequisites Installation
+1. Install [Node.JS](https://nodejs.org/en/) LTS version.
+2. Install [PostgreSQL](https://www.postgresql.org/download/).
+3. Clone this repository and navigate to the cloned folder.
+4. Install dependencies using `yarn` or `npm install`.
 
-## Antes de rodar o projeto:
-1. Para criar um novo banco de dados, utilize os  seguintes comandos dentro do terminal psql: 
+## Before running the project:
+1. To create a new database, use the following commands in the psql terminal:
 - CREATE USER `user` WITH PASSWORD `password`
 - CREATE DATABASE `database`
 - GRANT ALL PRIVILEGES ON DATABASE `database` to `user`
 
-2. Altere a DATABASE_URL dentro do arquivo .env para postgress://`user`:`password`@`localhost`/`database`
-3. Execute o script de criação das tabelas `yarn db:migrate` ou `npm run db:migrate`
-4. Execute o script de população de dados: `yarn db:seed` ou `npm run db:seed`
-5. Execute o script: [`yarn dev`, `npm run dev`] para iniciar o servidor.
+2. Modify the DATABASE_URL in the .env file to postgress://`user`:`password`@`localhost`/`database`.
+3. Execute the table creation script: `yarn db:migrate` or `npm run db:migrate`.
+4. Execute the data population script: `yarn db:seed` or `npm run db:seed`.
+5. Run the server: [`yarn dev`, `npm run dev`].
 
-## Estrutura de diretórios
+## Directory Structure
 
 ```
 ├── /src
@@ -48,27 +48,25 @@ O sistema consiste em um banco de dados dos navers, possuindo informações como
 ├── /test
 ```
 
-
 ## Postman
-[documentação da api](https://documenter.getpostman.com/view/10351182/Tz5wXaD6)
+[API documentation](https://documenter.getpostman.com/view/10351182/Tz5wXaD6)
 
-## Referencias
-Foi utilizado como base a Boilerplate construida pela nave.rs 
+## References
+The Boilerplate built by nave.rs was used as a base.
 [A boilerplate for building RESTful APIs using Node.js, PostgreSQL, koa, knex, objection.](https://github.com/naveteam/back-boilerplate)
 
+## (BONUS) Database Exercise - Using Native SQL
 
-## (BONUS) Exercício de Banco de Dados - com sql nativo
+In the `exercicios-extra-sql/` folder, you can find files with exercises implemented in SQL.
 
-Na pasta `exercicios-extra-sql/` estão os arquivos com os exercicios feitos em sql.
+## (Bonus) Database Exercise - Inside the Challenge
 
-## (Bonus) Exercício de Banco de Dados -  Direto no desafio
+Exercises 1 and 2 are available directly in the back dodesafio folder. To run:
 
-Os exercicios 1 e 2 estão disponiveis direto no back dodesafio, para rodar entre na pasta do `desafio`, após:
-
-Para rodar o exercicio 1: Script que deleta e crie todas as tabelas.
+To run exercise 1: A script that deletes and creates all tables.
 
 `npm run db:exercicio1`
 
-Para rodar o exercicio 2: script que limpa e cria dados nas tabelas.
+To run exercise 2: A script that clears and creates data in the tables.
 
 `npm run db:exercicio2`
